@@ -1,22 +1,13 @@
-# How to use shared element transitions in React Native
+# Instructions for porting for MS App Center
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />  
-</p>
-
-## 🚀 How to use
-
-- Bootstrap this project:
+- Clone the Repo:
   > `npx create-react-native-app -t https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions`
-- Start the project:
-  - `yarn ios` -- open on iOS
-  - `yarn android` -- open on Android
-
-## 📝 Notes
-
-- [**Tutorial**](https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/) by [@amanhimself][@amanhimself]
-
-[@amanhimself]: https://twitter.com/amanhimself
+- Remove Expo:
+  > `expo eject`
+- Install MS App Center SDK
+  > `yarn add appcenter appcenter-analytics appcenter-crashes --save-exact`
+  > `cd ios`
+  > `pod install`
+  - Create a "AppCenter-Config.plist" file within the ios folder
+  - open the xcode project file, add the "AppCenter-Config.plist" file, and do the following:
+<img width="672" alt="Screen Shot 2564-12-24 at 13 31 41" src="https://user-images.githubusercontent.com/62129193/147325045-b9d75da5-6b20-4ed7-804c-fdfb845252cf.png">
